@@ -4,7 +4,7 @@ import Side_bar from './Side_bar.js'
 
 const Body = () => {
   return (
-    <div>
+    <div className='flex'>
         <Side_bar/>
         <Outlet/>
     </div>

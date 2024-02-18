@@ -1,10 +1,12 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
-import Body from "./Body";
-import Head from "./Head";
-import Maincontainer from "./Maincontainer";
-import WatchPage from "./WatchPage";
-import Footer from "./Footer";
+import Body from "./components/Body";
+import Head from "./components/Head";
+import Maincontainer from "./components/Maincontainer";
+import WatchPage from "./components/WatchPage";
+import Footer from "./components/Footer";
+import { Provider } from "react-redux";
+import store from "./utils/Store";
 
 const Route = createBrowserRouter([{
   path:"/",
@@ -23,11 +25,13 @@ const Route = createBrowserRouter([{
 
 function App() {
   return (
+    <Provider store={store}>
     <div >
       <Head/>
       <RouterProvider router = {Route}/>
       <Footer/>
     </div>
+    </Provider>
   );
 }
 
