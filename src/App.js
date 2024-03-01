@@ -26,7 +26,7 @@ const Route = createBrowserRouter([{
 function App() {
   return (
     <Provider store={store}>
-    <div >
+    <div id="app" className="scrollbar-hide">
       <Head/>
       <RouterProvider router = {Route}/>
       <Footer/>
