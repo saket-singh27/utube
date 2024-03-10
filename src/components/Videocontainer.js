@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { YOUTUBE_LINK } from '../utils/constants'
 import Videocard from './Videocard';
 import { Link } from 'react-router-dom';
+import { toggleMenu } from '../utils/appSlice';
 
 const Videocontainer = () => {
 
@@ -11,6 +12,7 @@ const Videocontainer = () => {
     getVideos()
   },
     []);
+    // {console.log(toggleMenu)}
     const getVideos = async () =>{
       const data = await fetch(YOUTUBE_LINK);
       const json = await data.json();
@@ -21,8 +23,8 @@ const Videocontainer = () => {
     <div className='flex flex-wrap '>
     {videos.map(video=>
       <Link to={"/watch?v=" + video.id}><Videocard info={video} key={video.id}/></Link>)}
-    </div>
-  )
+    </div>)
+  
 }
 
 export default Videocontainer
