@@ -29,7 +29,8 @@ const dispatch = useDispatch();
     setSuggestion(json[1])
   }
   return (
-    <div className='grid grid-flow-col p-4 pb-7 shadow-lg'>
+    <div className=''>
+    <div className='grid grid-flow-col p-4 pb-7 shadow-lg bg-white '>
         <div className='col-span-1 flex'>
                 <img onClick={()=>{toggleHam()}} className="px-4 pt-1 h-7" alt="hamburger_icon" src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEX///8AAADPz89LS0uWlpaPj4/4+PhfX1/29vawsLAdHR3b29v8/PzExMQzMzOEhIRzc3MPDw+hoaGysrLq6uo8PDwXFxfh4eFkZGRXV1fGxsZGRkaHh4fX19d6enqnp6e7u7sLhoRgAAAChUlEQVR4nO3di1LCQAyF4eWOCIgIqPWC7/+UWhm8jZNs2Z3JJP2/J8gZK+1u02xKAAAAAAAAAAAAAAAAABDfcjWZjfyYTVbLTvl2rwN/Nrv8gBPrYi80ycw33VtXerH9NCvgwbrOAoeciGvrKous9YA31jUWutEC3ltXWOxeSfhgXWCxBzng3Lq+CuZiwivr8iq4EhNurMurYCMm9H2rOJFvGNbVVdHzhJ6f2M4WYsJH6/IqeBQTel03/SSvoYbW5VUwFBOmW+v6it3KAdPRusBiRyVhWlhXWEj+JW29WJdY6EVN6PzhW71GW1vrKgtscwKm1FjXebEmL+DHOtjjhvDHskle+/7JOPa2abofd9jyPpleD/24ztoKBgAAAAAAAAAAPs2b49iPY9PlvVPrbWT9Lqmz0VuHfEOf7QoLpZPm27N1qRdT29hPZtZ1FpjlBPTdJiw3CH+6s66x0J0W0H+zvnbb8P7JzGDwLAdcWtdXgfyp5cq6vApWwS9S7ab4ZF1eBU9iQv8twlqTsHV1VfT8bxj//zD+b2n8+2GEZxoxoOfV75nyXBpgbaH20vr+GCFjfdiDNX4P9mk8/9povzJfwu+Xpvh73q3o7y0AAAAAAAAAAIAjwedE7cbeZiavO836mvt8050/r83vzD25WehL+LmJvme0Zsy+jD+/1GeTwjd1Bq3va7SlXaf+m4SVWdDx53nHn8kef65+hLMRDmJC6+qq6HlCb2um/8jnzPhcNv0mtwl77/JuyZ3e/lv11Q+Bw5+71oOz89x/25UxOML3DSPjDMsenEMa/yzZ5HcNlXsecHJ6pvNrtwMulo2zc7mbbudyAwAAAAAAAAAAAAAAAIBP7y86VZGfUH/eAAAAAElFTkSuQmCC'/>
                 <a href='/'><img className="h-8" alt="youtube_image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png"/></a>
@@ -48,8 +49,8 @@ const dispatch = useDispatch();
             <button className='rounded-r-3xl border border-black p-1 px-4'>🔍</button>
         </div>
         {showSuggestion &&
-        <div className='absolute z-10 bg-white w-[30rem] p-2 py-2 px-5 rounded-lg border-gray-200'>
-          <ul>
+        <div className='absolute bg-white w-[30rem] p-2 py-2 px-5 rounded-lg border-b border-black'>
+          <ul className=''>
             {suggestion.map(s=>
               <li className='py-1 shadow-sm hover:bg-gray-100'>🔍 {s}</li>)}
           </ul>
@@ -62,6 +63,7 @@ const dispatch = useDispatch();
             <img className="h-7 px-2 pr-6" alt='user_image' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDBfwLirilBMO5kntBzXf6_8hdBswyEg2qVP8RQlvWsQ&s'/>
            
         </div>
+    </div>
     </div>
   )
 }

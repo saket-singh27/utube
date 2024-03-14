@@ -2,7 +2,7 @@ import React from 'react'
 
 const Buttonlist = () => {
   return (
-    <div className='relative flex items-center p-4'>
+    <div className='sticky top-[67px] flex items-center p-4 ml-44 bg-white my-4 -z-10'>
     <div className='w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
       <button className='px-2 border mx-3 rounded-md inline-block '>All</button>
       <button className='px-2 border mx-3 rounded-md inline-block'>Manga</button>

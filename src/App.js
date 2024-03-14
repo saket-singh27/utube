@@ -26,8 +26,10 @@ const Route = createBrowserRouter([{
 function App() {
   return (
     <Provider store={store}>
-    <div id="app" className="scrollbar-hide">
-      <Head/>
+    <div id="app" className="scrollbar-hide ">
+      <div className="sticky top-0 ">
+        <Head/>
+      </div>
       <RouterProvider router = {Route}/>
       <Footer/>
     </div>

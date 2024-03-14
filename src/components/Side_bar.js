@@ -5,16 +5,17 @@ const Side_bar = () => {
   const isMenuopen = useSelector((store)=> store.app.isMenuFlag);
   if(!isMenuopen) return null;
   return (
-    <div className='border shadow-lg p-4 w-52 '>
-      <div className='py-3 text-lg'>
+    <div className='shadow-lg p-3 w-40 fixed'>
+      <div className='py-3 text-lg border-b'>
         <ul className='py-1'>
         <li>Home</li>
         <li>Shorts</li>
         <li>Subscription</li>
         </ul>
       </div>
-      <div className='py-3 text-base'>
-        <ul className='py-1'>
+      <div className='py-3 text-base border-b'>
+        <ul className='py-1 '>
+        <li className='text-xl font-medium'>You </li>
         <li className='py-1'>Your Channel</li>
         <li className='py-1'>History</li>
         <li className='py-1'>Your videos</li>
@@ -32,6 +33,7 @@ const Side_bar = () => {
         <li className='py-1'>Songs</li>
         <li className='py-1'>Learning</li>
         <li className='py-1'>Podcast</li>
+        <li className='py-1'>Learning</li>
         </ul>
       </div>
     </div>
