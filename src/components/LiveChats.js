@@ -16,7 +16,7 @@ const LiveChats = () => {
                 comment:generateComment(15) + "🤘"
             }
             ))
-        },2000);
+        },700);
         return()=> clearInterval(s);
     },[]);
     const addComment = ()=>{
@@ -32,8 +32,8 @@ const LiveChats = () => {
   return (
     <>
     <div className='overflow-y-scroll h-[450px] w-full bg-gray-50 flex flex-col-reverse'>
-        {ChatMessages.map(c=><ChatMessage 
-            name={c.name} comment={c.comment}/>
+        {ChatMessages.map((c,index)=><ChatMessage 
+            name={c.name} comment={c.comment} key={index}/>
         )}
     </div>
     <form onSubmit={(e)=>{
